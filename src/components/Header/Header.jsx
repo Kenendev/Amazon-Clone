@@ -22,7 +22,7 @@ const Header = () => {
             {/* delivery */}
             <div className={classes.delivery}>
               <span>
-                <CiLocationOn />
+                <CiLocationOn size={25}/>
               </span>
               <div>
                 <p>Delivered to</p>
