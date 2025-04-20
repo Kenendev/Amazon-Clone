@@ -4,7 +4,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { LuShoppingCart } from "react-icons/lu";
 import { FiSearch } from "react-icons/fi";
 import LowerHeader from './LowerHeader';
-
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -13,12 +13,12 @@ const Header = () => {
         <div className={classes.header_container}>
           {/* logo */}
           <div className={classes.logo_container}>
-            <a href="#">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/small/amazon_PNG11.png"
                 alt="amazon logo"
               />
-            </a>
+            </Link>
             {/* delivery */}
             <div className={classes.delivery}>
               <span>
@@ -42,7 +42,7 @@ const Header = () => {
 
           {/* Right side links */}
           <div className={classes.order_container}>
-            <a href='' className={classes.language}>
+            <Link to='' className={classes.language}>
               <img
                 src="https://pngimg.com/uploads/flags/small/flags_PNG14592.png"
                 alt="us flag"
@@ -50,22 +50,22 @@ const Header = () => {
               <select>
                 <option value="" id=''>EN</option>
               </select>
-            </a>
+            </Link>
             {/* three components */}
-            <a href="">
+            <Link to="/auth">
               <div>
                 <p>Sign In</p> <span>Account & Lists</span>
               </div>
-            </a>
+            </Link>
             {/* orders */}
-            <a href="">
+            <Link to="/orders">
               <p>returns</p> <span>& Orders</span>
-            </a>
+            </Link>
             {/* cart */}
-            <a href="" className= {classes.cart}>
+            <Link to="/cart" className= {classes.cart}>
                 <LuShoppingCart size={35} />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
